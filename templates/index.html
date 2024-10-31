@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Поиск статей</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 900px;
+    }
+
+    .form-wrapper {
+      flex: 1;
+      padding: 40px;
+      margin: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .checkbox-container {
+			width: 310px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin-bottom: 10px;
+	}
+  </style>
+</head>
+<body>
+    <div class="form-wrapper">
+      <h2>Поиск статей</h2>
+      <form method="POST"
+			action="/state_post">
+
+			<label></label>
+			<input type="text"
+				name="title"
+				placeholder="Введите название работы:">
+
+        <p></p><label>Категории:</label><p></p>
+        <div class="checkbox-container">
+          <label for="element_for_customer1">Математика:</label>
+          <input type="checkbox" id="element_for_customer1" name="elements_for_customer" value="Математика" checked><br><br>
+ 
+          <label for="element_for_customer2">Информационные технологии и электроника:</label>
+          <input type="checkbox" id="element_for_customer2" name="elements_for_customer" value="Информационные технологии и электроника" checked><br><br>
+ 
+          <label for="element_for_customer3">Компьютерные науки:</label>
+          <input type="checkbox" id="element_for_customer3" name="elements_for_customer" value="Компьютерные науки" checked><br><br>
+ 
+          <label for="element_for_customer4">Экономика:</label>
+          <input type="checkbox" id="element_for_customer4" name="elements_for_customer" value="Экономика" checked><br><br>
+          
+			<p></p><input type="submit" value="Отправить">
+		</form>
+    </div>
+   
+   
+  
+  </div>
+</body>
+</html>

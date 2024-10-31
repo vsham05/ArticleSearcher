@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Найденные статьи</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+        }
+
+        .data-table {
+            width: 100%;
+            margin-right: 20px;
+            height: calc(100% - 120px);
+            overflow-y: auto;
+            display: flex; /* Для центрирования по вертикали */
+            flex-direction: column; /* Выравниваем по вертикали */
+            align-items: center; /* Выравниваем по центру */
+        }
+
+        .image-container {
+            width: 70%;
+            text-align: center;
+        }
+
+        .back-button {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #678;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-button">На главную страницу</a>
+
+    <div class="container">
+        <div class="card">
+            <div class="data-table">
+                <h2>Найденные статьи</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Название</th>
+                            <th>Ссылка</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for each in foobar %}
+                        <tr>
+                            <td>{{ each[0] }}</td>
+                            <td><a href= "{{ each[1] }}" > {{ each[1] }} </a></td>
+                        </tr>
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+
+                    
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
